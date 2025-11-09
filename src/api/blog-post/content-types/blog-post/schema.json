@@ -50,6 +50,12 @@
     },
     "Date": {
       "type": "date"
+    },
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
     }
   }
 }
