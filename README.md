@@ -1,61 +1,72 @@
-# 🚀 Getting started with Strapi
+# Strapi Backend -- Blog API
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+This Strapi backend provides the blog data for the React frontend.
+The API is public, and the frontend uses only one endpoint to fetch everything.
 
-### `develop`
+------------------------------------------------------------------------
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## About the Project
 
-```
-npm run develop
-# or
-yarn develop
-```
 
-### `start`
+------------------------------------------------------------------------
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+## API Endpoints for Blogs
 
-```
-npm run start
-# or
-yarn start
-```
+/blog-posts?populate=*
 
-### `build`
+------------------------------------------------------------------------
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+## Local Setup Instructions
 
-```
-npm run build
-# or
-yarn build
-```
+### 1. Clone the repository
 
-## ⚙️ Deployment
+    git clone https://github.com/pragatiTendolkar/backend-j.git
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+    cd backend-j
 
-```
-yarn strapi deploy
-```
+### 2. Install dependencies
 
-## 📚 Learn more
+    npm install
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+### 3. Start Strapi
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+    npm run develop
 
-## ✨ Community
+### 4. Admin panel
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+    http://localhost:1337/admin
 
----
+------------------------------------------------------------------------
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## Collections
+
+### Blog Posts
+
+-   Title
+-   Slug
+-   Description
+-   Content
+-   Featured Image
+-   Category
+-   Meta Title
+-   Meta Description
+
+
+------------------------------------------------------------------------
+
+## Public Permissions
+
+Make sure these permissions are enabled under **Settings → Roles →
+Public**:
+
+-   find\
+-   findOne\
+
+------------------------------------------------------------------------
+
+## Notes
+
+- This Strapi backend is **fully public**, so the frontend can fetch all blog data without authentication.  
+- All content, images, and categories are managed through the Strapi admin panel.  
+- Any updates in Strapi (new blogs, edits, or deletions) automatically reflect on the frontend via the single API.  
+- Designed for simplicity and easy integration with React.
